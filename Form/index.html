@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Daniel Cobb
+SSL Homework Week 1: Develop! Form Processing
+10-28-2016
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D Cobb Homework Week 1</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- Start Main Body -->
+    <main>
+        <!-- Start Signup Form -->
+        <form enctype="multipart/form-data" method="POST" action="newuser.php">
+            <h1>Create Your Account</h1>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required />
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required />
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" required />
+            <label for="img">Upload Your Profile Image</label>
+            <input type="file" id="img" name="img" required />
+            <input type="submit" value="Sign Up" id="submit" name="submit" />
+        </form>
+        <!-- End Signup Form -->
+    </main>
+    <!-- End Main Body -->
+</body>
+</html>

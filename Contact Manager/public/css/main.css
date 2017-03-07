@@ -1,0 +1,221 @@
+/*------------------------------------------------------------------------------
+Daniel Cobb
+SSL Week 4 Homework
+CSS
+11/16/2016
+------------------------------------------------------------------------------*/
+
+/*----- Animations for icon buttons: add user, delete, update -----*/
+@keyframes pulseSmallIcon{
+    0% {padding:2% 3%;}
+    25% {padding:1.8% 2.8%;}
+    50% {padding: 2.5% 3.5%;}
+    75% {padding:1.8% 2.8%;}
+    100% {padding:2% 3%;}
+}
+@keyframes pulseAddUser{
+    0% {padding:1.5%;}
+    25% {padding:1.2%;}
+    50% {padding: 2%;}
+    75% {padding:1.2%;}
+    100% {padding:1.5%;}
+}
+
+/*----- General Styling -----*/
+body{
+    font: 12pt/normal 'Helvetica', sans-serif;
+    background:#EEEEEE;
+}
+/* main has a padding to push it below fixed nav */
+main{
+    padding-top:38px;
+}
+.centered{
+    text-align: center;
+}
+main a, main a:hover{
+    color:inherit;
+}
+
+/*----- Nav styles -----*/
+nav{
+    background: #BDC3C7;
+    color: white;
+    width:99%;
+    padding:.5%;
+    display:block;
+    position:fixed;
+    z-index: 100;
+}
+nav ul, nav ul li{
+    list-style-type: none;
+    font-size:1.2em;
+    padding:0;
+    margin:0;
+}
+
+nav ul li a{
+    color:inherit;
+    text-decoration: none;
+}
+nav h1{
+    display:inline-block;
+    position: absolute;
+    right:25px;
+    top:10px;
+    font-size:1.2em;
+    font-weight:700;
+}
+
+/*----- Alert Box styles -----*/
+.alerts{
+    width:96%;
+    background: rgba(210, 77, 87,.5);
+    padding:2%;
+    text-align: center;
+    margin:0 auto;
+
+}
+
+.alerts > h2 {
+    font-size:1.2em;
+    font-weight:700;
+}
+
+/*----- Create User Icon styles/interactions -----*/
+#createUser{
+    position:fixed;
+    bottom:2%;
+    right:2%;
+    color:white;
+    background:#3FC380;
+    font-size:1.2em;
+    padding:1.5%;
+    border-radius:60%;
+    box-shadow: 3px 5px 7px rgba(0,0,0,.25);
+}
+
+#createUser:hover{
+    animation: pulseAddUser 2s ease-in-out;
+    cursor:pointer;
+}
+
+/*----- Contacts Display/Interactions -----*/
+.contacts{
+    width:90%;
+    padding:2%;
+    margin:0 auto;
+}
+.usercard{
+    width:calc(86%/3);
+    padding:1%;
+    margin:1%;
+    height:200px;
+    display:inline-block;
+    float:left;
+    border-radius:3px;
+    transition-duration: 500ms;
+    background:white;
+    overflow: hidden;
+    position: relative;
+}
+/* ::after is used to create the top border on cards */
+.usercard::after{
+    position: absolute;
+    height:10px;
+    width:400px;
+    top:0;
+    left:0;
+    background:#52B3D9;
+    content:' ';
+
+}
+.usercard:hover{
+    transform:scale(1.01);
+    box-shadow: 2px 3px 7px rgba(0,0,0,.2);
+}
+
+h4 {
+    font-size:1.2em;
+    font-weight:400;
+    margin:0;
+}
+/* user actions shown on mouse enter with js */
+.actions{
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding:5%;
+    width:100%;
+    display:none;
+}
+.deleteUser, .updateUser{
+    color:white;
+    background:#EC644B;
+    font-size:1.2em;
+    padding:2% 3%;
+    border-radius:60%;
+    box-shadow: 3px 5px 7px rgba(0,0,0,.25);
+    position:absolute;
+    left:5%;
+    top:-20px;
+}
+
+.updateUser{
+    background:#F4B350;
+    left:20%;
+}
+
+.deleteUser:hover, .updateUser:hover{
+    animation: pulseSmallIcon 2s ease-in-out;
+    cursor:pointer;
+}
+.actions a, .actions a:hover{
+    color:inherit;
+}
+
+/*----- Modal and Modal Form styles -----*/
+.modal{
+    background: rgba(0,0,0,.5);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 110;
+    display:none;
+}
+.modalform{
+    width:60%;
+    padding:2%;
+    background:#EEEEEE;
+    border-radius:5px;
+    margin:5% auto;
+    height:auto;
+    position: relative;
+}
+
+form{
+    width:80%;
+    padding:2%;
+    margin:0 auto;
+}
+input[type="text"], input[type="email"]{
+    width:100%;
+}
+input[type="submit"], .button{
+    background:#3FC380;
+    border:none;
+    box-shadow: 3px 5px 7px rgba(0,0,0,.25);
+}
+.button{
+    background:#EC644B;
+}
+.closeModal{
+    position:absolute;
+    top:10px;
+    right:25px;
+}
+
+.closeModal:hover{
+    cursor:pointer;
+}

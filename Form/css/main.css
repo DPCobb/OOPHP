@@ -1,0 +1,164 @@
+/*-----------------------------------------------
+Daniel Cobb
+SSL Homework Week 1: Analyze, Design! Form Processing
+10-28-2016
+-----------------------------------------------*/
+
+/*----- Body/General Styles -----*/
+body{
+    font:12pt/normal 'Helvetica', sans-serif;
+    background:#ECF0F1;
+    color:#22313F;
+}
+main{
+    width:80%;
+    margin:0 auto;
+}
+p{
+    text-align: center;
+}
+section{
+    width:80%;
+    padding:2%;
+    margin:5% auto;
+    background:#FDFDFD;
+    border-top:10px solid #3498DB;
+    border-radius:0 0 3px 3px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,.25);
+}
+img{
+    width:100%;
+    height:300px;
+}
+.overlay{
+    display:block;
+    margin:2% auto;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow: 2px 3px 5px rgba(0,0,0,.25);
+}
+/*----- Headers -----*/
+h1{
+    font-size:2em;
+    text-align: center;
+    color:inherit;
+}
+
+/*----- Form Styles -----*/
+form{
+    width:80%;
+    padding:2%;
+    margin:5% auto;
+    background:#FDFDFD;
+    border-top:10px solid #3498DB;
+    border-radius:0 0 3px 3px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,.25);
+}
+
+/*----- Form Component Styles -----*/
+label, input{
+    display:block;
+}
+label{
+    font-size:.75em;
+    font-weight:700;
+    display:block;
+    width:80%;
+    margin:0 auto;
+    color:#7e7e7e;
+}
+input[type="text"]{
+    width:80%;
+    padding:1.5% 2%;
+    margin:1% auto;
+    border-radius:3px;
+    border:1px solid #d3d3d3;
+}
+input[type="submit"]{
+    display:block;
+    background: #4DAF7C;
+    color: #fff;
+    padding: 2%;
+    border:none;
+    width:40%;
+    border-radius:3px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.2);
+    font-weight:700;
+    text-transform: uppercase;
+    transition-duration: 500ms;
+    margin:15% auto 5%;
+    font-size:1.1em;
+}
+input[type="submit"]:hover{
+    background:#38805b;
+    cursor: pointer;
+    transform:scale(1.01);
+}
+/* Styles for input type file */
+input[type="file"]{
+    width:84%;
+    margin:1% auto;
+}
+/* This styles the actual button part of input type file */
+input[type="file"]::-webkit-file-upload-button {
+    background: #3498DB;
+    color: #ececec;
+    padding: 2%;
+    border:none;
+    width:30%;
+    border-radius:3px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.2);
+    font-weight:700;
+    transition-duration: 500ms;
+}
+input[type="file"]::-webkit-file-upload-button:hover{
+    background:#1f74ac;
+    cursor: pointer;
+    transform:scale(1.01);
+}
+
+/*----- Button Styles -----*/
+.button{
+    text-decoration: none;
+    display:block;
+    background: #4DAF7C;
+    color: #fff;
+    padding: 2%;
+    border:none;
+    width:40%;
+    border-radius:3px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.2);
+    font-weight:700;
+    text-transform: uppercase;
+    transition-duration: 500ms;
+    margin:15% auto 5%;
+    font-size:1.1em;
+    text-align:center;
+}
+.button:hover{
+    background:#38805b;
+    cursor: pointer;
+    transform:scale(1.01);
+}
+
+/*----- Table ----- */
+table{
+    border-collapse: collapse;
+    width:80%;
+    margin: 2% auto;
+    font-size:1.2em;
+}
+tr{
+    width:96%;
+    padding:2%;
+}
+td{
+    width:46%;
+    padding:2%;
+}
+td:nth-of-type(odd){
+    text-align: right;
+    font-weight:700;
+}

@@ -1,0 +1,51 @@
+body{
+    font:12pt/normal 'Helvetica';
+    background:#22313F;
+    color:#ececec;
+}
+
+main{
+    width:98%;
+    margin:0 auto;
+    padding:1%;
+}
+h1{
+    margin-bottom:0;
+}
+form, #ad{
+    width:90%;
+    margin:1% auto 2%;
+    padding:1%;
+    background:#ececec;
+    color:#22313F;
+    border-radius:5px;
+    text-align: center;
+}
+label{
+    display:block;
+}
+input[type="text"]{
+    width: 90%;
+    display:block;
+    margin:1% auto;
+}
+table{
+    width:90%;
+    margin:1% auto 2%;
+    padding:2%;
+    background:#ececec;
+    color:#22313F;
+    border-radius:5px;
+    text-align: center;
+}
+tr td, th, td:first-child, th:first-child{
+    padding:1%;
+    font-size:.7em;
+    word-wrap: break-word;
+    word-break: break-all;
+    width:calc(90%/5);
+}
+
+#ad img {
+    width:80%;
+}
